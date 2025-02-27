@@ -1,0 +1,377 @@
+
+
+/* LAS NOTAS SON PARA ACORDARME PARA QUE SIRVE CADA ETIQUETA */
+
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+    background-color: #f4f4f4;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background: #333; 
+    color: white; 
+    padding: 1rem 0; /* Espaciado superior e inferior */
+    text-align: center; /* Centrar el contenido */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para dar efecto flotante */
+    top: 0;
+    left: 0;
+    width: 100%; /* Asegura que el header cubra todo el ancho de la pantalla */
+}
+
+header h1 {
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.8s ease-in-out;
+    font-size: 20px;
+}
+
+nav ul li a:hover {
+    color: #ffcc00;
+}
+
+main {
+    flex: 1;
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section {
+    background: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 1100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.secciontar {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Crea dos columnas */
+    gap: 20px; /* Espacio entre tarjetas */
+    padding: 20px;
+}
+
+.tarjeta {
+    width: 100%; /* La tarjeta se ajusta automáticamente al ancho de la columna */
+    max-width: 350px; /* Limita el ancho máximo */
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.tarjeta h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.tarjeta p {
+    font-size: 14px;
+    color: #555;
+    word-wrap: break-word;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    
+    -webkit-box-orient: vertical;
+}
+
+.tarjeta img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 10px;
+    max-height: 150px;
+}
+
+.tarjeta:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Ajuste para pantallas pequeñas */
+@media (max-width: 600px) {
+    section {
+        grid-template-columns: repeat(1, 1fr); /* En pantallas pequeñas, una sola columna */
+    }
+}
+
+.video-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 1000px;
+}
+
+video {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+.carousel {
+    position: relative;
+    width: 100%;  /* Carrusel ocupa todo el ancho disponible */
+    margin: 0 auto;
+    overflow: hidden;  /* Oculta las imágenes que no se ven */
+    border-radius: 8px;  /* Bordes redondeados */
+}
+
+.carrusel-images {
+    display: flex;
+    width: 500%; /* Esto asegura que tenga espacio para todas las imágenes */
+    animation: slide 30s linear infinite; /* Animación continua */
+}
+
+.carrusel-item {
+    width: 25%;  /* Cada imagen ocupa un cuarto del contenedor */
+    height: 400px;  /* Altura ajustable de las imágenes */
+    object-fit: cover;  /* Mantiene la proporción de la imagen, recortando si es necesario */
+}
+
+/* Animación para el carrusel */
+@keyframes slide {
+    0% { transform: translateX(0); }
+    20% { transform: translateX(-20%); }
+    40% { transform: translateX(-40%); }
+    60% { transform: translateX(-60%); }
+    80% { transform: translateX(-80%); }
+    100% { transform: translateX(0%); } /* Vuelve suavemente a la primera imagen */
+}
+
+
+form input[type="text"],
+form input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form input[type="submit"] {
+    background: #333;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background: #333;
+    color: white;
+    width: 100%;
+    margin-top: auto;
+}
+
+/* CONTACTOO */
+.form-group {
+    margin-bottom: 15px;
+}
+label {
+    font-size: 16px;
+    color: #333;
+    display: block;
+    margin-bottom: 5px;
+}
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+textarea {
+    resize: vertical;
+}
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #45a049;
+}
+
+/* NOSOTROS  */
+.team {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.team-member {
+    text-align: center;
+    width: 30%;
+}
+
+.team-member img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.team-member p {
+    font-size: 1.1rem;
+    margin-top: 10px;
+}
+
+/* Galeria Section */
+
+.proyecto {
+    text-align: center; 
+  }
+
+  .descripcion {
+    font-size: 14px;
+    color: #555;
+    margin-top: 10px;
+  }
+
+.galeria {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.galeriaimg {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+
+}
+
+
+
+
+
+
+
+/* PRODUCTOS Y SERVICIOS */
+
+
+
+
+.productos {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.producto {
+    width: 200px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.img-pequena {
+    width: 200px; 
+    height: 150px; 
+    object-fit: contain; /* Muestra la imagen completa sin recortarla */
+    border-radius: 5px;
+    background-color: white; /* Agregar un fondo si la imagen no llena el espacio */
+}
+.producto h3, .producto p {
+    margin: 5px 0;
+}
+
+.precio {
+    font-weight: bold;
+    color: green;
+    margin-top: auto; /* Empuja el precio hacia la parte inferior */
+
+
+
+   }
+
+.boton-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.boton {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.boton:hover {
+    background-color: #ffcc00;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
