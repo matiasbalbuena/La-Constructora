@@ -1,0 +1,277 @@
+@import "asesoramiento";
+@import "contacto" ;
+@import "nosotros"; 
+@import "producto"; 
+
+
+/* LAS NOTAS SON PARA ACORDARME PARA QUE SIRVE CADA ETIQUETA */
+
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+    background-color: #f4f4f4;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background: #333; 
+    color: white; 
+    padding: 1rem 0; /* Espaciado superior e inferior */
+    text-align: center; /* Centrar el contenido */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para dar efecto flotante */
+    top: 0;
+    left: 0;
+    width: 100%; /* Asegura que el header cubra todo el ancho de la pantalla */
+}
+
+header h1 {
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+
+nav {
+    background-color: #333;
+    padding: 15px;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 50;
+}
+
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+    padding: 10px;
+    font-size: min(4vw, 22px); /* Tamaño máximo 4vw, pero no mayor de 22px */
+}
+
+nav ul li a:hover {
+    color: #ff6600;
+}
+
+/* Reducción progresiva del tamaño de la fuente en desktop */
+@media (max-width: 1200px) {
+    nav ul li a {
+        font-size: min(3.5vw, 20px); /* Tamaño más pequeño pero limitado */
+    }
+}
+
+@media (max-width: 992px) {
+    nav ul li a {
+        font-size: min(3vw, 18px); 
+    }
+}
+
+@media (max-width: 768px) {
+    nav ul li a {
+        font-size: min(2.5vw, 16px); 
+    }
+}
+
+
+
+
+
+
+main {
+    flex: 1;
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section {
+    background: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 1100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.secciontar {
+    display: grid;
+    
+    grid-template-columns: repeat(2, 1fr); /* Crea dos columnas */
+    gap: 20px; /* Espacio entre tarjetas */
+    padding: 20px;
+}
+
+.tarjeta {
+    width: 100%; /* La tarjeta se ajusta automáticamente al ancho de la columna */
+    max-width: 350px; /* Limita el ancho máximo */
+    padding: 20px;
+    margin:auto;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.tarjeta h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.tarjeta p {
+    font-size: 14px;
+    color: #555;
+    word-wrap: break-word;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    
+    -webkit-box-orient: vertical;
+}
+
+.tarjeta img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 10px;
+    max-height: 150px;
+}
+
+.tarjeta:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Ajuste para pantallas pequeñas */
+@media (max-width: 600px) {
+    section {
+        grid-template-columns: repeat(1, 1fr); /* En pantallas pequeñas, una sola columna */
+    }
+}
+
+.video-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 1000px;
+}
+
+video {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+.carousel {
+    position: relative;
+    width: 100%;  /* Carrusel ocupa todo el ancho disponible */
+    margin: 0 auto;
+    overflow: hidden;  /* Oculta las imágenes que no se ven */
+    border-radius: 8px;  /* Bordes redondeados */
+}
+
+.carrusel-images {
+    display: flex;
+    width: 500%; /* Esto asegura que tenga espacio para todas las imágenes */
+    animation: slide 30s linear infinite; /* Animación continua */
+}
+
+.carrusel-item {
+    width: 25%;  /* Cada imagen ocupa un cuarto del contenedor */
+    height: 400px;  /* Altura ajustable de las imágenes */
+    object-fit: cover;  /* Mantiene la proporción de la imagen, recortando si es necesario */
+}
+
+/* Animación para el carrusel */
+@keyframes slide {
+    0% { transform: translateX(0); }
+    20% { transform: translateX(-20%); }
+    40% { transform: translateX(-40%); }
+    60% { transform: translateX(-60%); }
+    80% { transform: translateX(-80%); }
+    100% { transform: translateX(0%); } /* Vuelve suavemente a la primera imagen */
+}
+
+
+form input[type="text"],
+form input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form input[type="submit"] {
+    background: #333;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background: #333;
+    color: white;
+    width: 100%;
+    margin-top: auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
