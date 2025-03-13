@@ -45,7 +45,7 @@ nav {
     box-sizing: border-box; /* Asegura que el padding no afecte el ancho total */
 }
 
-/* Contenedor de la lista de enlaces */
+
 nav ul {
     list-style: none;
     padding: 0;
@@ -53,8 +53,8 @@ nav ul {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap; /* Permite que los elementos se ajusten si no hay espacio suficiente */
-    width: 100%; /* Asegura que el contenedor ocupe todo el ancho disponible */
+    flex-wrap: wrap; 
+    width: 100%; 
     box-sizing: border-box;
 }
 
@@ -68,9 +68,9 @@ nav ul li a {
     text-decoration: none;
     transition: color 0.3s ease-in-out;
     padding: 10px;
-    font-size: 1.7vw; /* Tamaño basado en el ancho de la ventana */
-    max-width: 200px; /* Aseguramos que no se estire demasiado en pantallas grandes */
-    text-align: center; /* Centra el texto */
+    font-size: 1.7vw; 
+    max-width: 200px;
+    text-align: center; 
     box-sizing: border-box;
 }
 
@@ -94,7 +94,7 @@ nav ul li a:hover {
 @media (max-width: 768px) {
     nav ul {
         display: grid;
-        grid-template-columns: repeat(2, 1fr); /* Mantiene dos columnas en tablets y móviles más grandes */
+        grid-template-columns: repeat(2, 1fr); 
         gap: 10px;
         justify-content: center;
         align-items: center;
@@ -109,7 +109,7 @@ nav ul li a:hover {
     }
 }
 
-/* Aquí se cambia a UNA COLUMNA en pantallas pequeñas */
+
 @media (max-width: 480px) {
     nav ul {
         grid-template-columns: 1fr; /* Ahora en una sola columna */
@@ -117,7 +117,7 @@ nav ul li a:hover {
     }
 
     nav ul li a {
-        font-size: 1rem; /* Tamaño más pequeño en pantallas muy pequeñas */
+        font-size: 1rem; 
     }
 }
 
