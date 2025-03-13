@@ -398,7 +398,7 @@ video {
   width: 100%; /* Carrusel ocupa todo el ancho disponible */
   margin: 0 auto;
   overflow: hidden; /* Oculta las imágenes que no se ven */
-  border-radius: 8px; /* Bordes redondeados */
+  border-radius: 8px; 
 }
 
 .carrusel-images {
