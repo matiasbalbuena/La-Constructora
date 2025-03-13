@@ -112,7 +112,7 @@ button:hover {
   width: 200px;
   height: 150px;
   -o-object-fit: contain;
-     object-fit: contain; /* Muestra la imagen completa sin recortarla */
+  object-fit: contain; /* Muestra la imagen completa sin recortarla */
   border-radius: 5px;
   background-color: white;
 }
@@ -185,23 +185,24 @@ button:hover {
   margin-top: 15px;
   width: 100%;
 }
+
 .btn-comprar:hover {
   background-color: #cc5200; /* Oscurece el color de fondo */
   transform: translateY(-5px);
 }
+
 .btn-comprar:focus {
   outline: none;
   box-shadow: 0 0 5px 2px rgba(255, 102, 0, 0.5); /* Efecto de foco */
 }
 
-/* LAS NOTAS SON PARA ACORDARME PARA QUE SIRVE CADA ETIQUETA */
 body {
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
   margin: 0;
   padding: 0;
   width: 100%;
   overflow-x: hidden;
-  background-color: #f705aee5;
+  background-color: #e21f1f;
   color: #333;
   display: flex;
   flex-direction: column;
@@ -398,7 +399,7 @@ video {
   width: 100%; /* Carrusel ocupa todo el ancho disponible */
   margin: 0 auto;
   overflow: hidden; /* Oculta las imágenes que no se ven */
-  border-radius: 8px; 
+  border-radius: 8px;
 }
 
 .carrusel-images {
@@ -411,7 +412,7 @@ video {
   width: 25%; /* Cada imagen ocupa un cuarto del contenedor */
   height: 400px; /* Altura ajustable de las imágenes */
   -o-object-fit: cover;
-     object-fit: cover; /* Mantiene la proporción de la imagen, recortando si es necesario */
+  object-fit: cover; /* Mantiene la proporción de la imagen, recortando si es necesario */
 }
 
 /* Animación para el carrusel */

@@ -1,41 +1,36 @@
-@import "asesoramiento";
-@import "contacto" ;
-@import "nosotros"; 
+@import "contacto";
+@import "nosotros";
 @import "producto"; 
 
-
-/* LAS NOTAS SON PARA ACORDARME PARA QUE SIRVE CADA ETIQUETA */
-
 body {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
     margin: 0;
     padding: 0;
     width: 100%;
     overflow-x: hidden;
-    background-color: #e41212;
+    background-color: #e21f1f;
     color: #333;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-}
-
-header {
-    background: #333; 
-    color: white; 
+  }
+  
+  header {
+    background: #333;
+    color: white;
     padding: 1rem 0; /* Espaciado superior e inferior */
     text-align: center; /* Centrar el contenido */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para dar efecto flotante */
     top: 0;
     left: 0;
     width: 100%; /* Asegura que el header cubra todo el ancho de la pantalla */
-}
-
-header h1 {
+  }
+  
+  header h1 {
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-}
-
-
-nav {
+  }
+  
+  nav {
     background-color: #333;
     padding: 15px;
     position: sticky;
@@ -43,90 +38,76 @@ nav {
     width: 100%;
     z-index: 50;
     box-sizing: border-box; /* Asegura que el padding no afecte el ancho total */
-}
-
-
-nav ul {
+  }
+  
+  nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap; 
-    width: 100%; 
+    flex-wrap: wrap;
+    width: 100%;
     box-sizing: border-box;
-}
-
-/* Estilos de los elementos del menú */
-nav ul li {
+  }
+  
+  /* Estilos de los elementos del menú */
+  nav ul li {
     margin: 0 15px;
-}
-
-nav ul li a {
+  }
+  
+  nav ul li a {
     color: white;
     text-decoration: none;
     transition: color 0.3s ease-in-out;
     padding: 10px;
-    font-size: 1.7vw; 
+    font-size: 1.7vw;
     max-width: 200px;
-    text-align: center; 
+    text-align: center;
     box-sizing: border-box;
-}
-
-nav ul li a:hover {
+  }
+  
+  nav ul li a:hover {
     color: #ff6600;
-}
-
-/* Ajuste de la fuente según el tamaño de la pantalla */
-@media (max-width: 1200px) {
+  }
+  
+  /* Ajuste de la fuente según el tamaño de la pantalla */
+  @media (max-width: 1200px) {
     nav ul li a {
-        font-size: 1.4rem;
+      font-size: 1.4rem;
     }
-}
-
-@media (max-width: 992px) {
+  }
+  @media (max-width: 992px) {
     nav ul li a {
-        font-size: 1.3rem;
+      font-size: 1.3rem;
     }
-}
-
-@media (max-width: 768px) {
+  }
+  @media (max-width: 768px) {
     nav ul {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr); 
-        gap: 10px;
-        justify-content: center;
-        align-items: center;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+      justify-content: center;
+      align-items: center;
     }
-
     nav ul li {
-        text-align: center;
+      text-align: center;
     }
-
     nav ul li a {
-        font-size: 1.2rem;
+      font-size: 1.2rem;
     }
-}
-
-
-@media (max-width: 480px) {
+  }
+  @media (max-width: 480px) {
     nav ul {
-        grid-template-columns: 1fr; /* Ahora en una sola columna */
-        gap: 8px;
+      grid-template-columns: 1fr; /* Ahora en una sola columna */
+      gap: 8px;
     }
-
     nav ul li a {
-        font-size: 1rem; 
+      font-size: 1rem;
     }
-}
-
-
-
-
-
-
-main {
+  }
+  main {
     flex: 1;
     padding: 20px;
     max-width: 1200px;
@@ -134,9 +115,9 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-section {
+  }
+  
+  section {
     background: white;
     padding: 20px;
     margin-bottom: 20px;
@@ -147,21 +128,20 @@ section {
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-.secciontar {
+  }
+  
+  .secciontar {
     display: grid;
-    
     grid-template-columns: repeat(2, 1fr); /* Crea dos columnas */
     gap: 20px; /* Espacio entre tarjetas */
     padding: 20px;
-}
-
-.tarjeta {
+  }
+  
+  .tarjeta {
     width: 100%; /* La tarjeta se ajusta automáticamente al ancho de la columna */
-    max-width: 350px; 
+    max-width: 350px; /* Limita el ancho máximo */
     padding: 20px;
-    margin:auto;
+    margin: auto;
     background-color: #fff;
     border: 1px solid #ddd;
     border-radius: 8px;
@@ -172,137 +152,119 @@ section {
     flex-direction: column;
     justify-content: space-between;
     overflow: hidden;
-}
-
-.tarjeta h3 {
+  }
+  
+  .tarjeta h3 {
     font-size: 18px;
     margin-bottom: 10px;
-}
-
-.tarjeta p {
+  }
+  
+  .tarjeta p {
     font-size: 14px;
     color: #555;
     word-wrap: break-word;
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
-    
     -webkit-box-orient: vertical;
-}
-
-.tarjeta img {
+  }
+  
+  .tarjeta img {
     width: 100%;
     height: auto;
     border-radius: 8px;
     margin-top: 10px;
     max-height: 150px;
-}
-
-.tarjeta:hover {
+  }
+  
+  .tarjeta:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-}
-
-/* Ajustes para pantallas pequeñas (móviles) */
-@media (max-width: 600px) {
+  }
+  
+  /* Ajustes para pantallas pequeñas (móviles) */
+  @media (max-width: 600px) {
     .secciontar {
-        grid-template-columns: 1fr; /* Una columna en pantallas pequeñas */
+      grid-template-columns: 1fr; /* Una columna en pantallas pequeñas */
     }
-}
-
-.video-container {
+  }
+  .video-container {
     display: flex;
     justify-content: center;
     width: 100%;
     max-width: 1000px;
-}
-
-video {
+  }
+  
+  video {
     max-width: 100%;
     border-radius: 8px;
-}
-
-.carousel {
+  }
+  
+  .carousel {
     position: relative;
-    width: 100%;  /* Carrusel ocupa todo el ancho disponible */
+    width: 100%; /* Carrusel ocupa todo el ancho disponible */
     margin: 0 auto;
-    overflow: hidden;  /* Oculta las imágenes que no se ven */
-    border-radius: 8px;  /* Bordes redondeados */
-}
-
-.carrusel-images {
+    overflow: hidden; /* Oculta las imágenes que no se ven */
+    border-radius: 8px; 
+  }
+  
+  .carrusel-images {
     display: flex;
     width: 500%; /* Esto asegura que tenga espacio para todas las imágenes */
     animation: slide 30s linear infinite; /* Animación continua */
-}
-
-.carrusel-item {
-    width: 25%;  /* Cada imagen ocupa un cuarto del contenedor */
-    height: 400px;  
-    object-fit: cover;  /* Mantiene la proporción de la imagen, recortando si es necesario */
-}
-
-/* Animación para el carrusel */
-@keyframes slide {
-    0% { transform: translateX(0); }
-    20% { transform: translateX(-20%); }
-    40% { transform: translateX(-40%); }
-    60% { transform: translateX(-60%); }
-    80% { transform: translateX(-80%); }
-    100% { transform: translateX(0%); } /* Vuelve suavemente a la primera imagen */
-}
-
-
-form input[type="text"],
-form input[type="email"] {
+  }
+  
+  .carrusel-item {
+    width: 25%; /* Cada imagen ocupa un cuarto del contenedor */
+    height: 400px; /* Altura ajustable de las imágenes */
+    -o-object-fit: cover;
+       object-fit: cover; /* Mantiene la proporción de la imagen, recortando si es necesario */
+  }
+  
+  /* Animación para el carrusel */
+  @keyframes slide {
+    0% {
+      transform: translateX(0);
+    }
+    20% {
+      transform: translateX(-20%);
+    }
+    40% {
+      transform: translateX(-40%);
+    }
+    60% {
+      transform: translateX(-60%);
+    }
+    80% {
+      transform: translateX(-80%);
+    }
+    100% {
+      transform: translateX(0%);
+    } /* Vuelve suavemente a la primera imagen */
+  }
+  form input[type=text],
+  form input[type=email] {
     width: 100%;
     padding: 10px;
     margin: 5px 0;
     border: 1px solid #ccc;
     border-radius: 5px;
-}
-
-form input[type="submit"] {
+  }
+  
+  form input[type=submit] {
     background: #333;
     color: white;
     padding: 10px 15px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-}
-
-footer {
+  }
+  
+  footer {
     text-align: center;
     padding: 10px;
     background: #333;
     color: white;
     width: 100%;
-    margin-top: auto;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    margin-top: auto;  
+ }

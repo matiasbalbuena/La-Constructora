@@ -3,47 +3,46 @@
     display: flex;
     justify-content: space-between;
     gap: 20px;
-}
-
-.team-member {
+  }
+  
+  .team-member {
     text-align: center;
     width: 30%;
-}
-
-.team-member img {
+  }
+  
+  .team-member img {
     width: 100%;
     border-radius: 8px;
-}
-
-.team-member p {
+  }
+  
+  .team-member p {
     font-size: 1.1rem;
     margin-top: 10px;
-}
-
-/* Galeria Section */
-
-.proyecto {
-    text-align: center; 
   }
-
+  
+  /* Galeria Section */
+  .proyecto {
+    text-align: center;
+  }
+  
   .descripcion {
     font-size: 14px;
     color: #555;
     margin-top: 10px;
   }
-
-.galeria {
+  
+  .galeria {
     display: flex;
     gap: 20px;
     justify-content: space-between;
     align-items: center;
     margin-top: 20px;
-}
-
-.galeriaimg {
+  }
+  
+  .galeriaimg {
     width: 100%;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     max-width: 300px;
-
-}
+  }
+  

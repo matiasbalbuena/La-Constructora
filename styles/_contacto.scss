@@ -1,24 +1,28 @@
 /* CONTACTOO */
 .form-group {
     margin-bottom: 15px;
-}
-label {
+  }
+  
+  label {
     font-size: 16px;
     color: #333;
     display: block;
     margin-bottom: 5px;
-}
-input, textarea {
+  }
+  
+  input, textarea {
     width: 100%;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
     font-size: 14px;
-}
-textarea {
+  }
+  
+  textarea {
     resize: vertical;
-}
-button {
+  }
+  
+  button {
     background-color: #4CAF50;
     color: white;
     border: none;
@@ -29,7 +33,9 @@ button {
     font-size: 16px;
     border-radius: 4px;
     cursor: pointer;
-}
-button:hover {
+  }
+  
+  button:hover {
     background-color: #45a049;
-}
+  }
+  
