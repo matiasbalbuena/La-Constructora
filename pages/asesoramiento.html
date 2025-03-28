@@ -13,12 +13,29 @@
         <h1>Asesoramiento</h1>
 
         <nav>
-            <ul>
+            <ul class="navhorizontal">
                 <li><a href="../index.html">Inicio</a></li>
                 <li><a href="nosotros.html">Nosotros</a></li>
                 <li><a href="asesoramiento.html">Asesoramiento</a></li>
                 <li><a href="contacto.html">Contacto</a></li>
                 <li><a href="producto.html">Productos y Servicios</a></li>
+            </ul>
+            <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="hamburger">
+            <div></div> <!--ESTOS DIV VACIOS FUNCIONAN COMO SIDEBAR   -->
+            <div></div> <!--ESTOS DIV VACIOS FUNCIONAN COMO SIDEBAR   -->
+            <div></div> <!--ESTOS DIV VACIOS FUNCIONAN COMO SIDEBAR   -->
+        
+        </label>
+        <div class="sidebar">
+            <ul>
+                <li><a href="../index.html" onclick="document.getElementById('menu-toggle').checked = false;">Inicio</a></li>
+                <li><a href="nosotros.html" onclick="document.getElementById('menu-toggle').checked = false;">Nosotros</a></li>
+                <li><a href="asesoramiento.html" onclick="document.getElementById('menu-toggle').checked = false;">Asesoramiento</a></li>
+                <li><a href="contacto.html" onclick="document.getElementById('menu-toggle').checked = false;">Contacto</a></li>
+                <li><a href="producto.html" onclick="document.getElementById('menu-toggle').checked = false;">Productos y Servicios</a></li>
+            </ul>
+        </div>
         </nav>
     </header>
 
@@ -46,19 +63,19 @@
             
             <form action="enviar_asesoramiento.php" method="POST">
                 <div class="form-group">
-                    <label for="nombre">Nombre completo</label>
+                    <label class="formulario" for="nombre">Nombre completo</label>
                     <input type="text" id="nombre" name="nombre" required>
                 </div>
                 <div class="form-group">
-                    <label for="email">Correo electrónico</label>
+                    <label class="formulario"  for="email">Correo electrónico</label>
                     <input type="email" id="email" name="email" required>
                 </div>
                 <div class="form-group">
-                    <label for="telefono">Teléfono</label>
+                    <label class="formulario" for="telefono">Teléfono</label>
                     <input type="tel" id="telefono" name="telefono" required>
                 </div>
                 <div class="form-group">
-                    <label for="mensaje">¿En qué te gustaría solicitar asesoría/servicios?</label>
+                    <label class="formulario" for="mensaje">¿En qué te gustaría solicitar asesoría/servicios?</label>
                     <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
                 </div>
                 <button type="submit">Solicitar asesoría</button>

@@ -5,19 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <link rel="stylesheet" href="./styles/style.css">
+  
 </head>
 <body>
 
     <header>
         <h1>La Constructora</h1>
         <nav>
-            <ul>
+            <ul class="navhorizontal">
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="pages/nosotros.html">Nosotros</a></li>
                 <li><a href="pages/asesoramiento.html">Asesoramiento</a></li>
                 <li><a href="pages/contacto.html">Contacto</a></li>
                 <li><a href="pages/producto.html">Productos y Servicios</a></li>
             </ul>
+            <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </label>
+        <div class="sidebar">
+            <ul>
+                <li><a href="index.html" onclick="document.getElementById('menu-toggle').checked = false;">Inicio</a></li>
+                <li><a href="pages/nosotros.html" onclick="document.getElementById('menu-toggle').checked = false;">Nosotros</a></li>
+                <li><a href="pages/asesoramiento.html" onclick="document.getElementById('menu-toggle').checked = false;">Asesoramiento</a></li>
+                <li><a href="pages/contacto.html" onclick="document.getElementById('menu-toggle').checked = false;">Contacto</a></li>
+                <li><a href="pages/producto.html" onclick="document.getElementById('menu-toggle').checked = false;">Productos y Servicios</a></li>
+            </ul>
+        </div>
         </nav>
     </header>
 
@@ -46,7 +62,7 @@
                   <img src="multimedia/6.png" alt="Imagen 4" class="carrusel-item">
                   <img src="multimedia/griferia.png" alt="Imagen 4" class="carrusel-item">
                   <img src="multimedia/vigueta.png" alt="Imagen 4" class="carrusel-item">
-                  <img src="multimedia/pallet ladrillos.png" alt="Imagen 4" class="carrusel-item">
+                  <img src="multimedia/palletladrillos.png" alt="Imagen 4" class="carrusel-item">
                      
 
                 </div>
@@ -59,34 +75,52 @@
 
 
         <!-- Sección de Tarjetas -->
+    <div class="contenedor-centrado"> 
+        
         <section class="secciontar">
+
             <div class="tarjeta">
                 <h3>Edificio Residencial</h3>
                 <p>Construcción de un edificio con 20 unidades residenciales. Finalizado en 2023, ubicado en Puerto Madero.</p>
                 <p><strong>Estado:</strong> Completado</p>
                 <p><strong>Servicios:</strong> Excavación, construcción, instalaciones eléctricas.</p>
-                <img src="multimedia/edificio ter.png" alt="Edificio Residencial XYZ">
+                <div class="img-container">
+                    <img src="multimedia/edificio ter.png" alt="Edificio Residencial XYZ">
+                </div>
             </div>
+
             <div class="tarjeta">
                 <h3>Centro Comercial "Concordia"</h3>
                 <p>Desarrollo de un centro comercial con 30 tiendas, áreas de recreación y parqueo subterráneo.</p>
                 <p><strong>Estado:</strong> En construcción</p>
                 <p><strong>Servicios:</strong> Diseño arquitectónico, obra civil, acabados.</p>
-                <img src="multimedia/edificio3.png" alt="Centro Comercial ">
+                <div class="img-container">
+                    <img src="multimedia/edificio3.png" alt="Centro Comercial ">
+                </div>
             </div>
             <div class="tarjeta">
                 <h3>Testimonios de Clientes</h3>
                 <p>"La empresa realizó el proyecto en tiempo récord, cumpliendo con todos nuestros requisitos. ¡Altamente recomendados!"</p>
                 <p><strong>Cliente:</strong> Jorge Castelli, CEO de Holcima.</p>
-                <img src="multimedia/ceo.png" alt="Testimonio de Cliente">
+                <div class="img-container">
+                    <img src="multimedia/ceo.png" alt="Testimonio de Cliente">
+                </div> 
             </div>
+
+
             <div class="tarjeta">
                 <h3>Certificaciones y Reconocimientos</h3>
-                <p>Certificación RES:9001: Gestión de calidad en todas nuestras operaciones.</p>
-                <img src="multimedia/certificado.png" alt="Certificación ISO">
+                <p> "Reconocimiento y certificación  de la Comisión 
+                    Técnica Mixta por el labor realizado en el puente Concordia-Salto"</p>
+                <p> <strong>Certificación RES:9001</strong>: Gestión de calidad en todas nuestras operaciones.</p>
+                
+                <div class="img-container">
+                    <img src="multimedia/certificado.png" alt="Certificación ISO">
+                </div>
             </div>
         
         </section>
+    </div>
 
     </main>
 

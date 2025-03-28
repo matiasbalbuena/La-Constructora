@@ -10,13 +10,28 @@
     <header>
         <h1>La Constructora</h1>
         <nav>
-            <ul>
+            <ul class="navhorizontal">
                 <li><a href="../index.html">Inicio</a></li>
                 <li><a href="nosotros.html">Nosotros</a></li>
                 <li><a href="asesoramiento.html">Asesoramiento</a></li>
                 <li><a href="contacto.html">Contacto</a></li>
                 <li><a href="producto.html">Productos y Servicios</a></li>
             </ul>
+            <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </label>
+        <div class="sidebar">
+            <ul>
+                <li><a href="../index.html" onclick="document.getElementById('menu-toggle').checked = false;">Inicio</a></li>
+                <li><a href="nosotros.html" onclick="document.getElementById('menu-toggle').checked = false;">Nosotros</a></li>
+                <li><a href="asesoramiento.html" onclick="document.getElementById('menu-toggle').checked = false;">Asesoramiento</a></li>
+                <li><a href="contacto.html" onclick="document.getElementById('menu-toggle').checked = false;">Contacto</a></li>
+                <li><a href="producto.html" onclick="document.getElementById('menu-toggle').checked = false;">Productos y Servicios</a></li>
+            </ul>
+        </div>
         </nav>
     </header>
 
@@ -28,15 +43,15 @@
                     <img class="img-pequena" src="https://www.concordiamateriales.com.ar/wp-content/uploads/2020/10/cemento-holcim.png" alt="Cemento">
                     <h3>Cemento "Holcim" x50 kg</h3>
                     <p>Cemento de alta calidad para construcción.</p>
-                    <p class="precio">$10000</p>
+                    <p class="precio">ARS 9000</p>
                     <button class="btn-comprar">Comprar</button>
                 </div>
 
                 <div class="producto">
-                    <img class="img-pequena" src="../multimedia/Cal-Cacique-Max-30-LomaNegra.png" alt="Hierro">
+                    <img class="img-pequena" src="../multimedia/calcaciquemax30LomaNegra.png" alt="Hierro">
                     <h3>Cal "Cacique" x30 kg</h3>
                     <p>Cal de alta calidad para terminaciones.</p>
-                    <p class="precio">$700</p>
+                    <p class="precio">ARS 6000</p>
                     <button class="btn-comprar">Comprar</button>
                 </div>
 
@@ -44,14 +59,14 @@
                     <img class="img-pequena" src="https://media.ambito.com/p/dcd1de59474ffddfebdf6cd9a8b73953/adjuntos/239/imagenes/039/526/0039526028/ladrillos-construccionnnjpg.jpg" alt="Ladrillos">
                     <h3>Ladrillos</h3>
                     <p>Ladrillos resistentes para todo tipo de obra.</p>
-                    <p class="precio">$300</p>
+                    <p class="precio">ARS 70000</p>
                     <button class="btn-comprar">Comprar</button>
                 </div>
                 <div class="producto">
                     <img class="img-pequena" src="https://images.cerymatlaplata.com.ar/products/5d793ff3620481568227315.jpg" alt="Hierro">
                     <h3>Hierro</h3>
-                    <p>Varillas de hierro para refuerzo estructural.</p>
-                    <p class="precio">$400</p>
+                    <p>Varillas de hierro (N8) para refuerzo estructural.</p>
+                    <p class="precio">ARS 8000</p>
                     <button class="btn-comprar">Comprar</button>
                 </div>
                 
@@ -59,28 +74,28 @@
                     <img class="img-pequena" src="../multimedia/5.png" alt="chapa">
                     <h3>Chapa de Zinc (Acanalada)</h3>
                     <p>Chapa de Zinc, durabilidad asegurada.</p>
-                    <p class="precio">$900</p>
+                    <p class="precio">ARS 9000</p>
                     <button class="btn-comprar">Comprar</button>
                 </div>
                 <div class="producto">
                     <img class="img-pequena" src="https://www.concordiamateriales.com.ar/wp-content/uploads/2020/12/FB_IMG_1607548972767.jpg" alt="Hierro">
                     <h3>Ladrillo Común</h3>
                     <p>Ladrillos resistentes para todo tipo de obra.</p>
-                    <p class="precio">$200</p>
+                    <p class="precio">ARS 50000</p>
                     <button class="btn-comprar">Comprar</button>
                 </div>
                 <div class="producto">
                     <img class="img-pequena" src="https://corralondelsurlp.com.ar/wp-content/uploads/2024/05/Ceresita10kg.png" alt="Hierro">
                     <h3>Hidrofugo en Pasta "Ceresita" x20</h3>
                     <p>"Ceresita" marca lider contra la humedad.</p>
-                    <p class="precio">$700</p>
+                    <p class="precio">ARS 25000</p>
                     <button class="btn-comprar">Comprar</button>
                 </div>
                 <div class="producto">
                     <img class="img-pequena" src="https://www.brufausanitarios.com.ar/6185-large_default/griferia-lavatorio-mind-21401.jpg" alt="Hierro">
                     <h3>Griferia Lavatorio</h3>
                     <p>Varillas de hierro para refuerzo estructural.</p>
-                    <p class="precio">$500</p>
+                    <p class="precio">ARS 45000</p>
                     <button class="btn-comprar">Comprar</button>
                 </div>
             </div>

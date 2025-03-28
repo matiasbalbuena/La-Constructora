@@ -13,13 +13,28 @@
         <h1>Nosotros</h1>
 
         <nav>
-            <ul>
+            <ul class="navhorizontal">
                 <li><a href="../index.html">Inicio</a></li>
                 <li><a href="nosotros.html">Nosotros</a></li>
                 <li><a href="asesoramiento.html">Asesoramiento</a></li>
                 <li><a href="contacto.html">Contacto</a></li>
                 <li><a href="producto.html">Productos y Servicios</a></li>
             </ul>
+            <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </label>
+        <div class="sidebar">
+            <ul>
+                <li><a href="../index.html" onclick="document.getElementById('menu-toggle').checked = false;">Inicio</a></li>
+                <li><a href="nosotros.html" onclick="document.getElementById('menu-toggle').checked = false;">Nosotros</a></li>
+                <li><a href="asesoramiento.html" onclick="document.getElementById('menu-toggle').checked = false;">Asesoramiento</a></li>
+                <li><a href="contacto.html" onclick="document.getElementById('menu-toggle').checked = false;">Contacto</a></li>
+                <li><a href="producto.html" onclick="document.getElementById('menu-toggle').checked = false;">Productos y Servicios</a></li>
+            </ul>
+        </div>
         </nav>
     </header>
 
